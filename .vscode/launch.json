@@ -1,0 +1,24 @@
+// {
+//   "version": "0.2.0",
+//   "configurations": [
+//     // {
+//     //   "name": "Flutter Web Server",
+//     //   "request": "launch",
+//     //   "type": "dart",
+//     //   "program": "${workspaceFolder}/lib/main.dart",
+//     //   "args": [
+//     //     "--web-port",
+//     //     "9090"
+//     //   ],
+//     //   "cwd": "${workspaceFolder}",
+//     //   "flutterMode": "debug"
+//     // },
+//     {
+//       "name": "Flutter Android",
+//       "request": "launch",
+//       "type": "dart",
+//       "program": "${workspaceFolder}/lib/main.dart",
+//       "flutterMode": "debug"
+//     }
+//   ]
+// }
