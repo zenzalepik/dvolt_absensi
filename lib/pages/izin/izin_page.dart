@@ -1,194 +1,27 @@
 import 'package:blur/blur.dart';
+import 'package:dyvolt_employee/pages/izin/izin_content_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/utils/icons.dart';
-import 'package:dyvolt_employee/widgets/appabr.dart';
 import 'package:dyvolt_employee/widgets/bottom_navigationbar.dart';
 import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-class PresensiDetailContent extends StatelessWidget {
-  const PresensiDetailContent({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 104 + 36 + 9 - 104 + 32,
-              ),
-              const SizedBox(
-                height: 32,
-              ),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 20),
-                // padding: const EdgeInsets.all(16.0),
-                decoration: const BoxDecoration(
-                    // color: AppColors.whiteColor,
-                    // borderRadius: BorderRadius.circular(16),
-                    // boxShadow: const [
-                    //   BoxShadow(
-                    //     color: Color.fromRGBO(89, 27, 27, 0.05),
-                    //     offset: Offset(0, 5),
-                    //     blurRadius: 10,
-                    //     spreadRadius: 0,
-                    //   ),
-                    // ],
-                    ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                            child: Container(
-                                padding: const EdgeInsets.all(16),
-                                decoration: BoxDecoration(
-                                    color: AppColors.bgCardDetail,
-                                    borderRadius: BorderRadius.circular(6)),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        SvgPicture.asset(
-                                            'assets/icons/icon_detail_presensi.svg',
-                                            height: 22,
-                                            width: 22),
-                                        SizedBox(
-                                          width: 8,
-                                        ),
-                                        Text('Detail Presensi kehadiran',
-                                            style: TextStyles.text16px700())
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: 23,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                            child: Text('Jadwal Masuk',
-                                                style: TextStyles.text12px600(
-                                                    color:
-                                                        AppColors.blackColor))),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      13, 4, 0, 0),
-                                              child: Text('July 23, 2022',
-                                                  style: TextStyles
-                                                      .text10px400())),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 18),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                            child: Text('Check in',
-                                                style: TextStyles.text12px600(
-                                                    color:
-                                                        AppColors.blackColor))),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      13, 4, 0, 0),
-                                              child: Text('07:00',
-                                                  style: TextStyles
-                                                      .text10px400())),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 18),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                            child: Text('Check out',
-                                                style: TextStyles.text12px600(
-                                                    color:
-                                                        AppColors.blackColor))),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      13, 4, 0, 0),
-                                              child: Text('16:20',
-                                                  style: TextStyles
-                                                      .text10px400())),
-                                        ),
-                                      ],
-                                    ),
-                                    // SizedBox(height: 18),
-                                  ],
-                                ))),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 12,
-                    ),
-                    const SizedBox(
-                      height: 48,
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 40)
-            ],
-          ),
-        ),
-        Positioned(
-          top: 0,
-          right: 0,
-          left: 0,
-          child: AppBarBack(
-            labelText: 'Presensi Kehadiran',
-            onBack: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class PresensiDetail extends StatefulWidget {
-  const PresensiDetail({super.key});
+class IzinPage extends StatefulWidget {
+  const IzinPage({super.key});
 
   @override
-  _PresensiDetailState createState() => _PresensiDetailState();
+  _IzinPageState createState() => _IzinPageState();
 }
 
-class _PresensiDetailState extends State<PresensiDetail> {
+class _IzinPageState extends State<IzinPage> {
   ValueNotifier<bool> visible = ValueNotifier<bool>(false);
 
   int _selectedIndex = 0;
   int fabOpacity = 1;
   bool fabMenuOpacity = false;
   bool animateOpacity = false;
-  bool fabMenuPresensiOpacity = false;
+  bool fabMenuIzinOpacity = false;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -209,7 +42,7 @@ class _PresensiDetailState extends State<PresensiDetail> {
       fabOpacity = 1;
       fabMenuOpacity = false;
       animateOpacity = false;
-      fabMenuPresensiOpacity = false;
+      fabMenuIzinOpacity = false;
     });
   }
 
@@ -217,12 +50,12 @@ class _PresensiDetailState extends State<PresensiDetail> {
     setState(() {
       fabMenuOpacity = false;
       // animateOpacity = false;
-      fabMenuPresensiOpacity = true;
+      fabMenuIzinOpacity = true;
     });
   }
 
   final List<Widget> _widgetOptions = [
-    const PresensiDetailContent(),
+    const Izin(),
   ];
 
   @override
@@ -358,7 +191,7 @@ class _PresensiDetailState extends State<PresensiDetail> {
                   opacity: animateOpacity ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 500),
                   child: Visibility(
-                    visible: fabMenuPresensiOpacity, //fabMenuPresensiOpacity
+                    visible: fabMenuIzinOpacity, //fabMenuIzinOpacity
                     child: Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,

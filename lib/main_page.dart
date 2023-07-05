@@ -1,7 +1,10 @@
-
 import 'package:blur/blur.dart';
 import 'package:dyvolt_employee/pages/home_page.dart';
+import 'package:dyvolt_employee/pages/izin/izin_pengajuan_page.dart';
+import 'package:dyvolt_employee/pages/lembur/lembur_pengajuan_page.dart';
 import 'package:dyvolt_employee/pages/profile_page.dart';
+import 'package:dyvolt_employee/pages/reimburs/reimburs_page.dart';
+import 'package:dyvolt_employee/pages/reimburs/reimburs_pengajuan_page.dart';
 import 'package:dyvolt_employee/pages/work/work_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
@@ -59,7 +62,7 @@ class _MainPageState extends State<MainPage> {
   final List<Widget> _widgetOptions = [
     const HomePage(),
     const WorkPage(),
-    const HalamanTiga(),
+    const ReimbursPage(),
     const ProfilePage(),
   ];
 
@@ -99,7 +102,8 @@ class _MainPageState extends State<MainPage> {
                                 children: [
                                   Container(
                                     padding: const EdgeInsets.all(30),
-                                    margin: const EdgeInsets.fromLTRB(24, 0, 24, 0),
+                                    margin:
+                                        const EdgeInsets.fromLTRB(24, 0, 24, 0),
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(20),
                                       color: AppColors.whiteColor,
@@ -124,7 +128,15 @@ class _MainPageState extends State<MainPage> {
                                             Expanded(
                                               child: TextButtonCustom(
                                                 labelText: 'Perizinan kerja',
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          IzinPengajuan(),
+                                                    ),
+                                                  );
+                                                },
                                               ),
                                             ),
                                           ],
@@ -135,7 +147,14 @@ class _MainPageState extends State<MainPage> {
                                             Expanded(
                                               child: TextButtonCustom(
                                                   labelText: 'Reimburs',
-                                                  onPressed: () {}),
+                                                  onPressed: () {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              ReimbursPengajuan(),
+                                                        ));
+                                                  }),
                                             ),
                                           ],
                                         ),
@@ -145,7 +164,14 @@ class _MainPageState extends State<MainPage> {
                                             Expanded(
                                               child: TextButtonCustom(
                                                 labelText: 'Lembur',
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            LemburPengajuan(),
+                                                      ));
+                                                },
                                               ),
                                             ),
                                           ],
@@ -204,8 +230,10 @@ class _MainPageState extends State<MainPage> {
                                 children: [
                                   Container(
                                     clipBehavior: Clip.antiAlias,
-                                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 48),
-                                    margin: const EdgeInsets.fromLTRB(24, 0, 24, 0),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 48),
+                                    margin:
+                                        const EdgeInsets.fromLTRB(24, 0, 24, 0),
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(20),
                                       color: AppColors.whiteColor,

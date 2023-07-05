@@ -1,4 +1,5 @@
 import 'package:blur/blur.dart';
+import 'package:dotted_border/dotted_border.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/utils/icons.dart';
@@ -8,8 +9,8 @@ import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class PresensiDetailContent extends StatelessWidget {
-  const PresensiDetailContent({super.key});
+class IzinPengajuanContent extends StatelessWidget {
+  const IzinPengajuanContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,102 +48,289 @@ class PresensiDetailContent extends StatelessWidget {
                     Row(
                       children: [
                         Expanded(
+                            child: Text('Pengajuan Izin Kerja',
+                                style: TextStyles.text24px600())),
+                      ],
+                    ),
+                    SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Expanded(
                             child: Container(
-                                padding: const EdgeInsets.all(16),
+                                clipBehavior: Clip.antiAlias,
                                 decoration: BoxDecoration(
                                     color: AppColors.bgCardDetail,
                                     borderRadius: BorderRadius.circular(6)),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                child: Stack(children: [
+                                  SvgPicture.asset(
+                                      'assets/images/img_ornament_splash_1.svg'),
+                                  Padding(
+                                    padding: const EdgeInsets.all(16),
+                                    child: Column(
                                       children: [
-                                        SvgPicture.asset(
-                                            'assets/icons/icon_detail_presensi.svg',
-                                            height: 22,
-                                            width: 22),
-                                        SizedBox(
-                                          width: 8,
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                                child: Text('Tipe Izin',
+                                                    style:
+                                                        TextStyles.text12px600(
+                                                            color: AppColors
+                                                                .blackColor))),
+                                          ],
                                         ),
-                                        Text('Detail Presensi kehadiran',
-                                            style: TextStyles.text16px700())
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: 23,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                            child: Text('Jadwal Masuk',
-                                                style: TextStyles.text12px600(
-                                                    color:
-                                                        AppColors.blackColor))),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      13, 4, 0, 0),
-                                              child: Text('July 23, 2022',
-                                                  style: TextStyles
-                                                      .text10px400())),
+                                        SizedBox(height: 4),
+                                        DropdownWhiteW(
+                                          labelText: 'Pilih Tipe Izin',
+                                          items: const [
+                                            'Izin Tahunan',
+                                            'Izin Sakit',
+                                          ],
+                                          onChanged: (value) {
+                                            print('Selected option: $value');
+                                          },
                                         ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 18),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                            child: Text('Check in',
-                                                style: TextStyles.text12px600(
-                                                    color:
-                                                        AppColors.blackColor))),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      13, 4, 0, 0),
-                                              child: Text('07:00',
-                                                  style: TextStyles
-                                                      .text10px400())),
+                                        SizedBox(height: 12),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                                child: Text('Tanggal Izin',
+                                                    style:
+                                                        TextStyles.text12px600(
+                                                            color: AppColors
+                                                                .blackColor))),
+                                          ],
                                         ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 18),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                            child: Text('Check out',
-                                                style: TextStyles.text12px600(
-                                                    color:
-                                                        AppColors.blackColor))),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      13, 4, 0, 0),
-                                              child: Text('16:20',
-                                                  style: TextStyles
-                                                      .text10px400())),
+                                        SizedBox(height: 4),
+                                        DateInputW(
+                                          labelText: '12 - August - 2022',
+                                          onChanged: (String SelectedDate) {
+                                            print(
+                                                'Selected Date: $SelectedDate');
+                                          },
                                         ),
+                                        SizedBox(height: 12),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                                child: Text('Tanggal Izin',
+                                                    style:
+                                                        TextStyles.text12px600(
+                                                            color: AppColors
+                                                                .blackColor))),
+                                          ],
+                                        ),
+                                        TextInputWhite(
+                                          hintText: 'Alasan pengajuan cuti...',
+                                        ),
+                                        SizedBox(height: 12),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                                child: Text(
+                                                    'Nomer Yang Bisa Dihubungi',
+                                                    style:
+                                                        TextStyles.text12px600(
+                                                            color: AppColors
+                                                                .blackColor))),
+                                          ],
+                                        ),
+                                        TextInputWhite(
+                                          hintText: '+628 172 312 3246',
+                                        ),
+                                        SizedBox(height: 18),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                                child: Text('Lampiran',
+                                                    style:
+                                                        TextStyles.text12px600(
+                                                            color: AppColors
+                                                                .blackColor))),
+                                          ],
+                                        ),
+                                        SizedBox(height: 4),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: GridView.builder(
+                                                shrinkWrap: true,
+                                                gridDelegate:
+                                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                                  crossAxisCount: 3,
+                                                  mainAxisSpacing: 8,
+                                                  crossAxisSpacing: 12,
+                                                ),
+                                                itemCount: 3,
+                                                itemBuilder: (context, index) {
+                                                  if (index == 0) {
+                                                    // Item kedua
+                                                    return MouseRegion(
+                                                      cursor: SystemMouseCursors
+                                                          .click,
+                                                      child: GestureDetector(
+                                                        child: Stack(
+                                                          children: [
+                                                            DottedBorder(
+                                                              borderType:
+                                                                  BorderType
+                                                                      .RRect,
+                                                              color: AppColors
+                                                                  .grey2EColor, // color of dotted/dash line
+                                                              strokeWidth:
+                                                                  1, // thickness of dash/dots
+                                                              dashPattern: [
+                                                                8,
+                                                                4
+                                                              ],
+                                                              radius: Radius
+                                                                  .circular(8),
+                                                              child: Container(
+                                                                width: 100,
+                                                                height: 100,
+                                                                clipBehavior: Clip
+                                                                    .antiAlias,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              8),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Opacity(
+                                                              opacity: 0.56,
+                                                              child: Container(
+                                                                color: AppColors
+                                                                    .bgGrey,
+                                                                width: 100,
+                                                                height: 100,
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              height: 100,
+                                                              width: 100,
+                                                              child: Center(
+                                                                child: SizedBox(
+                                                                  width: 39,
+                                                                  height: 39,
+                                                                  child:
+                                                                      CustomIcon(
+                                                                    iconName:
+                                                                        'icon_camera',
+                                                                    color: AppColors
+                                                                        .grey63Color,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    );
+                                                  } else {
+                                                    // Item selain kedua
+                                                    return MouseRegion(
+                                                      cursor: SystemMouseCursors
+                                                          .click,
+                                                      child: GestureDetector(
+                                                        child: Stack(
+                                                          children: [
+                                                            DottedBorder(
+                                                              borderType:
+                                                                  BorderType
+                                                                      .RRect,
+                                                              color: AppColors
+                                                                  .grey2EColor, // color of dotted/dash line
+                                                              strokeWidth:
+                                                                  1, // thickness of dash/dots
+                                                              dashPattern: [
+                                                                8,
+                                                                4
+                                                              ],
+                                                              radius: Radius
+                                                                  .circular(8),
+                                                              child: Container(
+                                                                width: 100,
+                                                                height: 100,
+                                                                clipBehavior: Clip
+                                                                    .antiAlias,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              8),
+                                                                ),
+                                                                child:
+                                                                    Image.asset(
+                                                                  'assets/images/izin/sakit/img_izin_sakit_1.png',
+                                                                  fit: BoxFit
+                                                                      .cover,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Opacity(
+                                                              opacity: 0.56,
+                                                              child: Container(
+                                                                color: AppColors
+                                                                    .bgGrey,
+                                                                width: 100,
+                                                                height: 100,
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              height: 100,
+                                                              width: 100,
+                                                              child: Center(
+                                                                child: SizedBox(
+                                                                  width: 30,
+                                                                  height: 31,
+                                                                  child:
+                                                                      CustomIcon(
+                                                                    iconName:
+                                                                        'icon_image',
+                                                                    color: AppColors
+                                                                        .grey63Color,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    );
+                                                  }
+                                                },
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(height: 12),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: Text(
+                                                  'Lengkapi formulir diatas untuk melakukan izin kerja',
+                                                  style:
+                                                      TextStyles.text12px300()),
+                                            ),
+                                          ],
+                                        )
                                       ],
                                     ),
-                                    // SizedBox(height: 18),
-                                  ],
-                                ))),
+                                  )
+                                ]))),
+                      ],
+                    ),
+                    SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Expanded(
+                            child: ButtonMedium(
+                          labelText: 'Save',
+                          onPressed: () {},
+                        ))
                       ],
                     ),
                     const SizedBox(
@@ -163,7 +351,7 @@ class PresensiDetailContent extends StatelessWidget {
           right: 0,
           left: 0,
           child: AppBarBack(
-            labelText: 'Presensi Kehadiran',
+            labelText: 'Izin Kerja',
             onBack: () {
               Navigator.of(context).pop();
             },
@@ -174,21 +362,21 @@ class PresensiDetailContent extends StatelessWidget {
   }
 }
 
-class PresensiDetail extends StatefulWidget {
-  const PresensiDetail({super.key});
+class IzinPengajuan extends StatefulWidget {
+  const IzinPengajuan({super.key});
 
   @override
-  _PresensiDetailState createState() => _PresensiDetailState();
+  _IzinPengajuanState createState() => _IzinPengajuanState();
 }
 
-class _PresensiDetailState extends State<PresensiDetail> {
+class _IzinPengajuanState extends State<IzinPengajuan> {
   ValueNotifier<bool> visible = ValueNotifier<bool>(false);
 
   int _selectedIndex = 0;
   int fabOpacity = 1;
   bool fabMenuOpacity = false;
   bool animateOpacity = false;
-  bool fabMenuPresensiOpacity = false;
+  bool fabMenuIzinOpacity = false;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -209,7 +397,7 @@ class _PresensiDetailState extends State<PresensiDetail> {
       fabOpacity = 1;
       fabMenuOpacity = false;
       animateOpacity = false;
-      fabMenuPresensiOpacity = false;
+      fabMenuIzinOpacity = false;
     });
   }
 
@@ -217,12 +405,12 @@ class _PresensiDetailState extends State<PresensiDetail> {
     setState(() {
       fabMenuOpacity = false;
       // animateOpacity = false;
-      fabMenuPresensiOpacity = true;
+      fabMenuIzinOpacity = true;
     });
   }
 
   final List<Widget> _widgetOptions = [
-    const PresensiDetailContent(),
+    const IzinPengajuanContent(),
   ];
 
   @override
@@ -358,7 +546,7 @@ class _PresensiDetailState extends State<PresensiDetail> {
                   opacity: animateOpacity ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 500),
                   child: Visibility(
-                    visible: fabMenuPresensiOpacity, //fabMenuPresensiOpacity
+                    visible: fabMenuIzinOpacity, //fabMenuIzinOpacity
                     child: Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,

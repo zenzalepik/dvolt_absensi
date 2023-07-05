@@ -68,6 +68,15 @@ class TextStyles {
       letterSpacing: 0.2,
     );
   }
+  static TextStyle text24px600({Color color = AppColors.blackColor}) {
+    return TextStyle(
+      color: color,
+      fontSize: 24,
+      fontFamily: 'Inter',
+      fontStyle: FontStyle.normal,
+      fontWeight: FontWeight.w600,
+    );
+  }
 
   static TextStyle text22px500({Color color = AppColors.blackColor}) {
     return TextStyle(
@@ -193,6 +202,15 @@ class TextStyles {
     );
   }
 
+  static TextStyle text15px500({Color color = AppColors.grey63Color}) {
+    return TextStyle(
+      color: color,
+      fontSize: 15,
+      fontFamily: 'Inter',
+      fontWeight: FontWeight.w500,
+    );
+  }
+
   static TextStyle text14px600({Color color = AppColors.greyBlackColor}) {
     return TextStyle(
       color: color,
@@ -235,6 +253,36 @@ class TextStyles {
     return TextStyle(
       color: color,
       fontSize: 12,
+      fontFamily: 'Inter',
+      fontStyle: FontStyle.normal,
+      fontWeight: FontWeight.w400,
+    );
+  }
+
+  static TextStyle text12px300({Color color = AppColors.greyBlackColor}) {
+    return TextStyle(
+      color: color,
+      fontSize: 12,
+      fontFamily: 'Inter',
+      fontStyle: FontStyle.normal,
+      fontWeight: FontWeight.w300,
+    );
+  }
+
+  static TextStyle text10px400({Color color = AppColors.grey63Color}) {
+    return TextStyle(
+      color: color,
+      fontSize: 10,
+      fontFamily: 'Inter',
+      fontStyle: FontStyle.normal,
+      fontWeight: FontWeight.w400,
+    );
+  }
+
+  static TextStyle text8px400({Color color = AppColors.grey63Color}) {
+    return TextStyle(
+      color: color,
+      fontSize: 10,
       fontFamily: 'Inter',
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w400,

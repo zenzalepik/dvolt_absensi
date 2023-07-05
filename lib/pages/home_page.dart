@@ -1,10 +1,12 @@
-
+import 'package:dyvolt_employee/pages/izin/izin_page.dart';
 import 'package:dyvolt_employee/pages/performa/performa_mekanik_page.dart';
 import 'package:dyvolt_employee/pages/presensi/presensi_page.dart';
+import 'package:dyvolt_employee/pages/sakit/_sakit_page.dart_';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/widgets/appabr.dart';
 import 'package:dyvolt_employee/widgets/card_activities.dart';
+import 'package:dyvolt_employee/widgets/card_anouncement.dart';
 import 'package:dyvolt_employee/widgets/card_order.dart';
 import 'package:flutter/material.dart';
 
@@ -49,11 +51,11 @@ class HomePage extends StatelessWidget {
                       Text('Work Order', style: TextStyles.textTitleSection()),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: (){},
+                        onTap: () {},
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: (){},
+                        onTap: () {},
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.primaryColor,
                       ),
@@ -72,11 +74,11 @@ class HomePage extends StatelessWidget {
                             textValue: 'Hadir 14 hari dari 27',
                             textTitle: 'Presensi Kehadiran',
                             onTap: () {
-Navigator.push(
-  context,
-  MaterialPageRoute(builder: (context) => const PresensiPage()),
-);
-
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const PresensiPage()),
+                              );
                             },
                           )),
                           const SizedBox(width: 12),
@@ -85,7 +87,13 @@ Navigator.push(
                               whatCard: 'izin',
                               textValue: 'Izin 2 hari dari 7',
                               textTitle: 'Perizinan Kerja',
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const IzinPage()),
+                                );
+                              },
                             ),
                           ),
                         ],
@@ -100,7 +108,13 @@ Navigator.push(
                             whatCard: 'sakit',
                             textValue: 'Sakit 2 hari',
                             textTitle: 'Sakit',
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const SakitPage()),
+                              );
+                            },
                           )),
                           const SizedBox(width: 12),
                           Expanded(
@@ -123,17 +137,18 @@ Navigator.push(
                       const SizedBox(
                         height: 48,
                       ),
-                      Text('Work Order', style: TextStyles.textTitleSection()),
+                      Text('Anouncement', style: TextStyles.textTitleSection()),
                       const SizedBox(height: 12),
-                      CardOrderWidget(
-                        onTap: (){},
+                      CardAnaouncementWidget(
+                        onTap: () {},
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.primaryColor,
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 40)
+                const SizedBox(height: 40),
+                const SizedBox(height: 80)
               ],
             ),
           ),

@@ -1,28 +1,28 @@
-import 'package:dyvolt_employee/pages/presensi/presensi_detail_page.dart';
+import 'package:dyvolt_employee/pages/lembur/lembur_detail_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:flutter/material.dart';
 
-class CardPresensiWidget extends StatelessWidget {
+class CardLemburWidget extends StatelessWidget {
   final Color bgColor;
   final Color labelColor;
   final VoidCallback onTap;
   final String status;
   final String keterangan;
 
-  const CardPresensiWidget({
+  const CardLemburWidget({
     Key? key,
-    this.bgColor = AppColors.bgRed,
-    this.labelColor = AppColors.labelErrorColor,
+    this.bgColor = AppColors.bgGrey,
+    this.labelColor = AppColors.primaryColor,
     required this.onTap,
     this.status = '',
     this.keterangan = '',
   }) : super(key: key);
-  void _openDetailPresensi(context) {
+  void _openDetailLembur(context) {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const PresensiDetail(),
+          builder: (context) => const LemburDetail(),
         ));
   }
 
@@ -32,7 +32,7 @@ class CardPresensiWidget extends StatelessWidget {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          _openDetailPresensi(context);
+          _openDetailLembur(context);
         },
         child: Stack(children: [
           Container(
@@ -50,10 +50,17 @@ class CardPresensiWidget extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(status == '' ? 'Hadir' : status,
+                            child: Text('Lembur',
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyles.text16px800()),
+                          ),
+                          Expanded(
+                            child: Text('July 29, 2023',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyles.text12px600(
+                                    color: AppColors.greyBlackColor)),
                           ),
                         ],
                       ),
@@ -61,42 +68,18 @@ class CardPresensiWidget extends StatelessWidget {
                         height: 12,
                       ),
                       Row(
+                        children: [],
+                      ),
+                      Row(
                         children: [
                           Expanded(
-                            child: Text(
-                                status == '' ? 'Check in 07:00' : keterangan,
+                            child: Text('Durasi:',
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyles.text14px600()),
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  width: 12,
-                ),
-                Expanded(
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
                           Expanded(
-                            child: Text('July 23, 2022',
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyles.text16px800()),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(status == '' ? 'Check Out 16:20' : '',
+                            child: Text('3 jam - 20 Menit',
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyles.text14px600()),

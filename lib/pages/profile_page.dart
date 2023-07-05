@@ -1,3 +1,4 @@
+import 'package:dyvolt_employee/pages/lembur/lembur_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/widgets/arrow_menu.dart';
@@ -136,7 +137,13 @@ class ProfilePage extends StatelessWidget {
                               Expanded(
                                 child: ArrowMenuW(
                                   labelText: 'Lembur',
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => LemburPage(),
+                                        ));
+                                  },
                                 ),
                               )
                             ],

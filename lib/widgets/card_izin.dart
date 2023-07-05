@@ -1,16 +1,16 @@
-import 'package:dyvolt_employee/pages/presensi/presensi_detail_page.dart';
+import 'package:dyvolt_employee/pages/izin/izin_detail_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:flutter/material.dart';
 
-class CardPresensiWidget extends StatelessWidget {
+class CardIzinWidget extends StatelessWidget {
   final Color bgColor;
   final Color labelColor;
   final VoidCallback onTap;
   final String status;
   final String keterangan;
 
-  const CardPresensiWidget({
+  const CardIzinWidget({
     Key? key,
     this.bgColor = AppColors.bgRed,
     this.labelColor = AppColors.labelErrorColor,
@@ -18,11 +18,11 @@ class CardPresensiWidget extends StatelessWidget {
     this.status = '',
     this.keterangan = '',
   }) : super(key: key);
-  void _openDetailPresensi(context) {
+  void _openDetailIzin(context) {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const PresensiDetail(),
+          builder: (context) => const IzinDetail(),
         ));
   }
 
@@ -32,7 +32,7 @@ class CardPresensiWidget extends StatelessWidget {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          _openDetailPresensi(context);
+          _openDetailIzin(context);
         },
         child: Stack(children: [
           Container(
@@ -55,33 +55,6 @@ class CardPresensiWidget extends StatelessWidget {
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyles.text16px800()),
                           ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                                status == '' ? 'Check in 07:00' : keterangan,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyles.text14px600()),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  width: 12,
-                ),
-                Expanded(
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
                           Expanded(
                             child: Text('July 23, 2022',
                                 maxLines: 2,
@@ -94,13 +67,25 @@ class CardPresensiWidget extends StatelessWidget {
                         height: 12,
                       ),
                       Row(
+                        children: [],
+                      ),
+                      Row(
                         children: [
                           Expanded(
-                            child: Text(status == '' ? 'Check Out 16:20' : '',
+                            child: Text(
+                                status == '' ? 'Check in 07:00' : keterangan,
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyles.text14px600()),
                           ),
+                          status == ''
+                              ? Expanded(
+                                  child: Text('Check Out 16:20',
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyles.text14px600()),
+                                )
+                              : SizedBox(width: 0),
                         ],
                       ),
                     ],

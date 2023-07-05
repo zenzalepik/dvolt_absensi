@@ -8,8 +8,8 @@ import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class PresensiDetailContent extends StatelessWidget {
-  const PresensiDetailContent({super.key});
+class LemburDetailContent extends StatelessWidget {
+  const LemburDetailContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,101 +48,136 @@ class PresensiDetailContent extends StatelessWidget {
                       children: [
                         Expanded(
                             child: Container(
-                                padding: const EdgeInsets.all(16),
+                                clipBehavior: Clip.antiAlias,
                                 decoration: BoxDecoration(
                                     color: AppColors.bgCardDetail,
                                     borderRadius: BorderRadius.circular(6)),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                child: Stack(children: [
+                                  SvgPicture.asset(
+                                      'assets/images/img_ornament_splash_1.svg'),
+                                  Padding(
+                                    padding: const EdgeInsets.all(16),
+                                    child: Column(
                                       children: [
-                                        SvgPicture.asset(
-                                            'assets/icons/icon_detail_presensi.svg',
-                                            height: 22,
-                                            width: 22),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            SvgPicture.asset(
+                                                'assets/icons/icon_detail_presensi.svg',
+                                                height: 22,
+                                                width: 22),
+                                            SizedBox(
+                                              width: 8,
+                                            ),
+                                            Text('Detail Lembur',
+                                                style: TextStyles.text16px700())
+                                          ],
+                                        ),
                                         SizedBox(
-                                          width: 8,
+                                          height: 23,
                                         ),
-                                        Text('Detail Presensi kehadiran',
-                                            style: TextStyles.text16px700())
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: 23,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                            child: Text('Jadwal Masuk',
-                                                style: TextStyles.text12px600(
-                                                    color:
-                                                        AppColors.blackColor))),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      13, 4, 0, 0),
-                                              child: Text('July 23, 2022',
-                                                  style: TextStyles
-                                                      .text10px400())),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                                child: Text('Tipe Lembur',
+                                                    style:
+                                                        TextStyles.text12px600(
+                                                            color: AppColors
+                                                                .blackColor))),
+                                          ],
                                         ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 18),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                            child: Text('Check in',
-                                                style: TextStyles.text12px600(
-                                                    color:
-                                                        AppColors.blackColor))),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      13, 4, 0, 0),
-                                              child: Text('07:00',
-                                                  style: TextStyles
-                                                      .text10px400())),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          13, 4, 0, 0),
+                                                  child: Text('Lembur Kerja',
+                                                      style: TextStyles
+                                                          .text10px400())),
+                                            ),
+                                          ],
                                         ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 18),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                            child: Text('Check out',
-                                                style: TextStyles.text12px600(
-                                                    color:
-                                                        AppColors.blackColor))),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      13, 4, 0, 0),
-                                              child: Text('16:20',
-                                                  style: TextStyles
-                                                      .text10px400())),
+                                        SizedBox(height: 18),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                                child: Text('Jenis Lembur',
+                                                    style:
+                                                        TextStyles.text12px600(
+                                                            color: AppColors
+                                                                .blackColor))),
+                                          ],
                                         ),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          13, 4, 0, 0),
+                                                  child: Text('Event',
+                                                      style: TextStyles
+                                                          .text10px400())),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(height: 18),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                                child: Text('Tanggal Lembur',
+                                                    style:
+                                                        TextStyles.text12px600(
+                                                            color: AppColors
+                                                                .blackColor))),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          13, 4, 0, 0),
+                                                  child: Text('July 12, 2023',
+                                                      style: TextStyles
+                                                          .text10px400())),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(height: 18),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                                child: Text('Durasi Lembur',
+                                                    style:
+                                                        TextStyles.text12px600(
+                                                            color: AppColors
+                                                                .blackColor))),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          13, 4, 0, 0),
+                                                  child: Text(
+                                                      '3 jam - 20 menit',
+                                                      style: TextStyles
+                                                          .text10px400())),
+                                            ),
+                                          ],
+                                        ),
+                                        // SizedBox(height: 18),
                                       ],
                                     ),
-                                    // SizedBox(height: 18),
-                                  ],
-                                ))),
+                                  )
+                                ]))),
                       ],
                     ),
                     const SizedBox(
@@ -163,7 +198,7 @@ class PresensiDetailContent extends StatelessWidget {
           right: 0,
           left: 0,
           child: AppBarBack(
-            labelText: 'Presensi Kehadiran',
+            labelText: 'Lembur Kerja',
             onBack: () {
               Navigator.of(context).pop();
             },
@@ -174,21 +209,21 @@ class PresensiDetailContent extends StatelessWidget {
   }
 }
 
-class PresensiDetail extends StatefulWidget {
-  const PresensiDetail({super.key});
+class LemburDetail extends StatefulWidget {
+  const LemburDetail({super.key});
 
   @override
-  _PresensiDetailState createState() => _PresensiDetailState();
+  _LemburDetailState createState() => _LemburDetailState();
 }
 
-class _PresensiDetailState extends State<PresensiDetail> {
+class _LemburDetailState extends State<LemburDetail> {
   ValueNotifier<bool> visible = ValueNotifier<bool>(false);
 
   int _selectedIndex = 0;
   int fabOpacity = 1;
   bool fabMenuOpacity = false;
   bool animateOpacity = false;
-  bool fabMenuPresensiOpacity = false;
+  bool fabMenuIzinOpacity = false;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -209,7 +244,7 @@ class _PresensiDetailState extends State<PresensiDetail> {
       fabOpacity = 1;
       fabMenuOpacity = false;
       animateOpacity = false;
-      fabMenuPresensiOpacity = false;
+      fabMenuIzinOpacity = false;
     });
   }
 
@@ -217,12 +252,12 @@ class _PresensiDetailState extends State<PresensiDetail> {
     setState(() {
       fabMenuOpacity = false;
       // animateOpacity = false;
-      fabMenuPresensiOpacity = true;
+      fabMenuIzinOpacity = true;
     });
   }
 
   final List<Widget> _widgetOptions = [
-    const PresensiDetailContent(),
+    const LemburDetailContent(),
   ];
 
   @override
@@ -358,7 +393,7 @@ class _PresensiDetailState extends State<PresensiDetail> {
                   opacity: animateOpacity ? 1.0 : 0.0,
                   duration: const Duration(milliseconds: 500),
                   child: Visibility(
-                    visible: fabMenuPresensiOpacity, //fabMenuPresensiOpacity
+                    visible: fabMenuIzinOpacity, //fabMenuIzinOpacity
                     child: Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
