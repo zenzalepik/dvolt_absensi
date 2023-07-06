@@ -61,7 +61,7 @@ class CardReimbursWidget extends StatelessWidget {
                       const SizedBox(
                         height: 12,
                       ),
-                      Row(
+                      const Row(
                         children: [],
                       ),
                       Row(
@@ -106,7 +106,7 @@ class CardReimbursWidget extends StatelessWidget {
                                 ),
                                 Row(
                                   children: [
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 16,
                                       width: 16,
                                       child: CustomIcon(
@@ -114,7 +114,7 @@ class CardReimbursWidget extends StatelessWidget {
                                         color: AppColors.greyBlackColor,
                                       ),
                                     ),
-                                    SizedBox(width: 4),
+                                    const SizedBox(width: 4),
                                     Expanded(
                                       child: Text('29 July 2023',
                                           maxLines: 2,

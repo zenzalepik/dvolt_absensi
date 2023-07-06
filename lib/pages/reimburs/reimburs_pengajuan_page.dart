@@ -54,7 +54,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                 style: TextStyles.text24px600())),
                       ],
                     ),
-                    SizedBox(height: 12),
+                    const SizedBox(height: 12),
                     Row(
                       children: [
                         Expanded(
@@ -80,7 +80,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        Row(
+                                        const Row(
                                           children: [
                                             Expanded(
                                                 child: TextInputWhite(
@@ -89,7 +89,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                                         'filled_disable')),
                                           ],
                                         ),
-                                        SizedBox(height: 18),
+                                        const SizedBox(height: 18),
 
                                         Row(
                                           children: [
@@ -102,7 +102,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        Row(
+                                        const Row(
                                           children: [
                                             Expanded(
                                               child: TextInputWhite(
@@ -112,7 +112,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-                                        SizedBox(height: 18),
+                                        const SizedBox(height: 18),
                                         Row(
                                           children: [
                                             Expanded(
@@ -123,7 +123,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        Row(
+                                        const Row(
                                           children: [
                                             Expanded(
                                               child: TextInputWhite(
@@ -133,7 +133,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-                                        SizedBox(height: 18),
+                                        const SizedBox(height: 18),
                                         Row(
                                           children: [
                                             Expanded(
@@ -144,7 +144,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        SizedBox(height: 6),
+                                        const SizedBox(height: 6),
                                         Row(
                                           children: [
                                             Expanded(
@@ -159,7 +159,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-                                        SizedBox(height: 18),
+                                        const SizedBox(height: 18),
                                         Row(
                                           children: [
                                             Expanded(
@@ -170,7 +170,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        Row(
+                                        const Row(
                                           children: [
                                             Expanded(
                                               child: TextInputWhite(
@@ -179,7 +179,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-                                        SizedBox(height: 18),
+                                        const SizedBox(height: 18),
                                         Row(
                                           children: [
                                             Expanded(
@@ -190,14 +190,14 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        SizedBox(height: 6),
+                                        const SizedBox(height: 6),
                                         Row(
                                           children: [
                                             Expanded(
                                               child: GridView.builder(
                                                 shrinkWrap: true,
                                                 gridDelegate:
-                                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                                    const SliverGridDelegateWithFixedCrossAxisCount(
                                                   crossAxisCount: 3,
                                                   mainAxisSpacing: 8,
                                                   crossAxisSpacing: 12,
@@ -220,11 +220,11 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                                                   .grey2EColor, // color of dotted/dash line
                                                               strokeWidth:
                                                                   1, // thickness of dash/dots
-                                                              dashPattern: [
+                                                              dashPattern: const [
                                                                 8,
                                                                 4
                                                               ],
-                                                              radius: Radius
+                                                              radius: const Radius
                                                                   .circular(8),
                                                               child: Container(
                                                                 width: 100,
@@ -249,7 +249,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                                                 height: 100,
                                                               ),
                                                             ),
-                                                            Container(
+                                                            const SizedBox(
                                                               height: 100,
                                                               width: 100,
                                                               child: Center(
@@ -286,11 +286,11 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                                                   .grey2EColor, // color of dotted/dash line
                                                               strokeWidth:
                                                                   1, // thickness of dash/dots
-                                                              dashPattern: [
+                                                              dashPattern: const [
                                                                 8,
                                                                 4
                                                               ],
-                                                              radius: Radius
+                                                              radius: const Radius
                                                                   .circular(8),
                                                               child: Container(
                                                                 width: 100,
@@ -321,7 +321,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                                                 height: 100,
                                                               ),
                                                             ),
-                                                            Container(
+                                                            const SizedBox(
                                                               height: 100,
                                                               width: 100,
                                                               child: Center(
@@ -348,7 +348,7 @@ class ReimbursPengajuanContent extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-                                        SizedBox(height: 12),
+                                        const SizedBox(height: 12),
                                         Row(
                                           children: [
                                             Expanded(

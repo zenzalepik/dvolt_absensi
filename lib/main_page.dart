@@ -1,15 +1,10 @@
 import 'package:blur/blur.dart';
 import 'package:dyvolt_employee/pages/home_page.dart';
-import 'package:dyvolt_employee/pages/izin/izin_pengajuan_page.dart';
-import 'package:dyvolt_employee/pages/lembur/lembur_pengajuan_page.dart';
 import 'package:dyvolt_employee/pages/profile_page.dart';
 import 'package:dyvolt_employee/pages/reimburs/reimburs_page.dart';
-import 'package:dyvolt_employee/pages/reimburs/reimburs_pengajuan_page.dart';
 import 'package:dyvolt_employee/pages/work/work_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
-import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/utils/icons.dart';
-import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:dyvolt_employee/widgets/fab_menu_pop_up.dart';
 import 'package:dyvolt_employee/widgets/presensi_pop_up.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +58,7 @@ class _MainPageState extends State<MainPage> {
 
   final List<Widget> _widgetOptions = [
     const HomePage(),
-    WorkPage(),
+    const WorkPage(),
     const ReimbursPage(),
     const ProfilePage(),
   ];

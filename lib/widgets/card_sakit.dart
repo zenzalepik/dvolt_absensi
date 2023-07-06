@@ -66,7 +66,7 @@ class CardSakitWidget extends StatelessWidget {
                       const SizedBox(
                         height: 12,
                       ),
-                      Row(
+                      const Row(
                         children: [],
                       ),
                       Row(
@@ -85,7 +85,7 @@ class CardSakitWidget extends StatelessWidget {
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyles.text14px600()),
                                 )
-                              : SizedBox(width: 0),
+                              : const SizedBox(width: 0),
                         ],
                       ),
                     ],

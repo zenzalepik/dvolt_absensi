@@ -4,7 +4,6 @@ import 'package:dyvolt_employee/pages/login_page.dart';
 import 'package:dyvolt_employee/pages/performa/performa_mekanik_page.dart';
 import 'package:dyvolt_employee/pages/presensi/presensi_page.dart';
 import 'package:dyvolt_employee/pages/reimburs/reimburs_appbarback_page.dart';
-import 'package:dyvolt_employee/pages/reimburs/reimburs_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/widgets/arrow_menu.dart';
@@ -95,7 +94,7 @@ class ProfilePage extends StatelessWidget {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => PresensiPage(),
+                                          builder: (context) => const PresensiPage(),
                                         ));},
                                 ),
                               )
@@ -113,7 +112,7 @@ class ProfilePage extends StatelessWidget {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => PerformaMekanikPage(),
+                                          builder: (context) => const PerformaMekanikPage(),
                                         ));},
                                 ),
                               )
@@ -131,7 +130,7 @@ class ProfilePage extends StatelessWidget {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => IzinPage(),
+                                          builder: (context) => const IzinPage(),
                                         ));},
                                 ),
                               )
@@ -149,7 +148,7 @@ class ProfilePage extends StatelessWidget {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => ReimbursAppbarbackPage(),
+                                          builder: (context) => const ReimbursAppbarbackPage(),
                                         ));},
                                 ),
                               )
@@ -167,7 +166,7 @@ class ProfilePage extends StatelessWidget {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => LemburPage(),
+                                          builder: (context) => const LemburPage(),
                                         ));
                                   },
                                 ),
@@ -184,7 +183,7 @@ class ProfilePage extends StatelessWidget {
                                   labelText: 'Logout',
                                   onTap: () {Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (context) => LoginPage()),
+        MaterialPageRoute(builder: (context) => const LoginPage()),
         (Route<dynamic> route) => false,
       );},
                                 ),

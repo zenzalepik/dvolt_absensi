@@ -6,7 +6,7 @@ import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:flutter/material.dart';
 
 class WorkPage extends StatelessWidget {
-  WorkPage({super.key});
+  const WorkPage({super.key});
 
   @override
   Widget build(BuildContext context) {

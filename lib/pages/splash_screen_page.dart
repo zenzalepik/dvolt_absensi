@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:dyvolt_employee/main_page.dart';
 import 'package:dyvolt_employee/pages/login_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

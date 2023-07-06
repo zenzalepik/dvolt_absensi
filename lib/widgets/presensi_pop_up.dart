@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class PresensiPopUp extends StatelessWidget {
   final VoidCallback onPressed;
 
-  PresensiPopUp({required this.onPressed});
+  const PresensiPopUp({super.key, required this.onPressed});
   @override
   Widget build(BuildContext context) {
     return Center(

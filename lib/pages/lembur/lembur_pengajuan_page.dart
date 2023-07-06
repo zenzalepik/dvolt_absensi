@@ -1,8 +1,6 @@
 import 'package:blur/blur.dart';
-import 'package:dotted_border/dotted_border.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
-import 'package:dyvolt_employee/utils/icons.dart';
 import 'package:dyvolt_employee/widgets/appabr.dart';
 import 'package:dyvolt_employee/widgets/bottom_navigationbar.dart';
 import 'package:dyvolt_employee/widgets/components/form_components.dart';
@@ -54,7 +52,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                 style: TextStyles.text24px600())),
                       ],
                     ),
-                    SizedBox(height: 12),
+                    const SizedBox(height: 12),
                     Row(
                       children: [
                         Expanded(
@@ -80,7 +78,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        SizedBox(height: 4),
+                                        const SizedBox(height: 4),
                                         DropdownWhiteW(
                                           labelText: 'Pilih Tipe Lembur',
                                           items: const [
@@ -91,7 +89,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                             print('Selected option: $value');
                                           },
                                         ),
-                                        SizedBox(height: 12),
+                                        const SizedBox(height: 12),
                                         Row(
                                           children: [
                                             Expanded(
@@ -102,7 +100,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        SizedBox(height: 4),
+                                        const SizedBox(height: 4),
                                         DropdownWhiteW(
                                           labelText: 'Pilih Jenis Lembur',
                                           items: const [
@@ -113,7 +111,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                             print('Selected option: $value');
                                           },
                                         ),
-                                        SizedBox(height: 12),
+                                        const SizedBox(height: 12),
                                         Row(
                                           children: [
                                             Expanded(
@@ -124,7 +122,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        SizedBox(height: 4),
+                                        const SizedBox(height: 4),
                                         DateInputW(
                                           labelText: '12 - August - 2022',
                                           onChanged: (String SelectedDate) {
@@ -132,7 +130,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                                 'Selected Date: $SelectedDate');
                                           },
                                         ),
-                                        SizedBox(height: 12),
+                                        const SizedBox(height: 12),
                                         Row(
                                           children: [
                                             Expanded(
@@ -143,7 +141,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        SizedBox(height: 4),
+                                        const SizedBox(height: 4),
                                         Row(children: [
                                           Expanded(
                                             child: ClockInputW(
@@ -155,7 +153,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                             ),
                                           )
                                         ]),
-                                        SizedBox(height: 12),
+                                        const SizedBox(height: 12),
                                         Row(
                                           children: [
                                             Expanded(
@@ -166,7 +164,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        SizedBox(height: 4),
+                                        const SizedBox(height: 4),
                                         Row(children: [
                                           Expanded(
                                             child: ClockInputW(
@@ -178,7 +176,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                             ),
                                           )
                                         ]),
-                                        SizedBox(height: 12),
+                                        const SizedBox(height: 12),
                                         Row(
                                           children: [
                                             Expanded(
@@ -195,7 +193,7 @@ class LemburPengajuanContent extends StatelessWidget {
                                 ]))),
                       ],
                     ),
-                    SizedBox(height: 12),
+                    const SizedBox(height: 12),
                     Row(
                       children: [
                         Expanded(

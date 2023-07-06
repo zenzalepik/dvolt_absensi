@@ -1,13 +1,9 @@
 import 'package:dyvolt_employee/pages/work/work_order_detail_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
-import 'package:dyvolt_employee/utils/fonts.dart';
-import 'package:dyvolt_employee/utils/icons.dart';
 import 'package:dyvolt_employee/widgets/appabr.dart';
-import 'package:dyvolt_employee/widgets/card_activities.dart';
 import 'package:dyvolt_employee/widgets/card_order.dart';
 import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class WorkPage extends StatelessWidget {
   const WorkPage({super.key});
@@ -23,16 +19,16 @@ class WorkPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 104,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 32,
                 ),
                 Container(
                   margin: const EdgeInsets.symmetric(horizontal: 20),
                   // padding: const EdgeInsets.all(16.0),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       // color: AppColors.whiteColor,
                       // borderRadius: BorderRadius.circular(16),
                       // boxShadow: const [
@@ -51,82 +47,82 @@ class WorkPage extends StatelessWidget {
                         Expanded(
                           child: DropdownW(
                             labelText: 'July 2023',
-                            items: ['Option 1', 'Option 2', 'Option 3'],
+                            items: const ['Option 1', 'Option 2', 'Option 3'],
                             onChanged: (value) {
                               print('Selected option: $value');
                             },
                           ),
                         ),
-                        SizedBox(width: 6),
+                        const SizedBox(width: 6),
                         Expanded(
                           child: DropdownW(
                             labelText: 'Status',
-                            items: ['Option 1', 'Option 2'],
+                            items: const ['Option 1', 'Option 2'],
                             onChanged: (value) {
                               print('Selected option: $value');
                             },
                           ),
                         )
                       ]),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
-                      SizedBox(height: 12),
+                      const SizedBox(height: 12),
                       CardOrderWidget(
                         onTap: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute<void>(
                                   builder: (BuildContext context) =>
-                                      WorkOrderDetailPage()));
+                                      const WorkOrderDetailPage()));
                         },
                       ),
-                      SizedBox(height: 12),
+                      const SizedBox(height: 12),
                       CardOrderWidget(
                         onTap: () {},
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.primaryColor,
                       ),
-                      SizedBox(height: 12),
+                      const SizedBox(height: 12),
                       CardOrderWidget(
                         onTap: () {},
                         bgColor: AppColors.bgGreen,
                         labelColor: AppColors.labelSuccessColor,
                       ),
-                      SizedBox(height: 12),
+                      const SizedBox(height: 12),
                       CardOrderWidget(
                         onTap: () {},
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.labelInfoColor,
                       ),
-                      SizedBox(height: 12),
+                      const SizedBox(height: 12),
                       CardOrderWidget(
                         onTap: () {},
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.labelInfoColor,
                       ),
-                      SizedBox(height: 12),
+                      const SizedBox(height: 12),
                       CardOrderWidget(
                         onTap: () {},
                       ),
-                      SizedBox(height: 12),
+                      const SizedBox(height: 12),
                       CardOrderWidget(
                         onTap: () {},
                         bgColor: AppColors.bgGreen,
                         labelColor: AppColors.labelSuccessColor,
                       ),
-                      SizedBox(height: 12),
+                      const SizedBox(height: 12),
                       CardOrderWidget(
                         onTap: () {},
                       ),
                     ],
                   ),
                 ),
-                SizedBox(height: 40 + 80)
+                const SizedBox(height: 40 + 80)
               ],
             ),
           ),
-          Positioned(top: 0, right: 0, left: 0, child: AppBarHello()),
+          const Positioned(top: 0, right: 0, left: 0, child: AppBarHello()),
         ],
       ),
     );

@@ -10,7 +10,7 @@ class FABMenuPopUp extends StatelessWidget {
   final VoidCallback fabMenuPresensi;
   final VoidCallback showFAB;
 
-  FABMenuPopUp({
+  const FABMenuPopUp({super.key, 
     required this.fabMenuPresensi,
     required this.showFAB,
   });
@@ -54,11 +54,11 @@ class FABMenuPopUp extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => IzinPengajuan(),
+                                    builder: (context) => const IzinPengajuan(),
                                   ),
                                 );
                                 Future.delayed(
-                                    Duration(milliseconds: 750), showFAB);
+                                    const Duration(milliseconds: 750), showFAB);
                               },
                             ),
                           ),
@@ -75,11 +75,10 @@ class FABMenuPopUp extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            ReimbursPengajuan(),
+                                            const ReimbursPengajuan(),
                                       ));
                                   Future.delayed(
-                                      Duration(milliseconds: 750), showFAB);
-                                  ;
+                                      const Duration(milliseconds: 750), showFAB);
                                 }),
                           ),
                         ],
@@ -94,10 +93,10 @@ class FABMenuPopUp extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => LemburPengajuan(),
+                                      builder: (context) => const LemburPengajuan(),
                                     ));
                                 Future.delayed(
-                                    Duration(milliseconds: 750), showFAB);
+                                    const Duration(milliseconds: 750), showFAB);
                               },
                             ),
                           ),

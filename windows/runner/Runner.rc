@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "tugas_instagram" "\0"
+            VALUE "FileDescription", "dyvolt_employee" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "tugas_instagram" "\0"
+            VALUE "InternalName", "dyvolt_employee" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "tugas_instagram.exe" "\0"
-            VALUE "ProductName", "tugas_instagram" "\0"
+            VALUE "OriginalFilename", "dyvolt_employee.exe" "\0"
+            VALUE "ProductName", "dyvolt_employee" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

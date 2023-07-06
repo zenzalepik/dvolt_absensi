@@ -2,10 +2,7 @@
 import 'package:blur/blur.dart';
 import 'package:dyvolt_employee/pages/work/work_order_detail_content_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
-import 'package:dyvolt_employee/utils/fonts.dart';
-import 'package:dyvolt_employee/utils/icons.dart';
 import 'package:dyvolt_employee/widgets/bottom_navigationbar.dart';
-import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:dyvolt_employee/widgets/fab_menu_pop_up.dart';
 import 'package:dyvolt_employee/widgets/presensi_pop_up.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +55,7 @@ class _WorkOrderDetailPageState extends State<WorkOrderDetailPage> {
   }
 
   final List<Widget> _widgetOptions = [
-    WorkOrderDetail(),
+    const WorkOrderDetail(),
   ];
 
   @override

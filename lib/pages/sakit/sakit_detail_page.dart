@@ -1,10 +1,8 @@
 import 'package:blur/blur.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
-import 'package:dyvolt_employee/utils/icons.dart';
 import 'package:dyvolt_employee/widgets/appabr.dart';
 import 'package:dyvolt_employee/widgets/bottom_navigationbar.dart';
-import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:dyvolt_employee/widgets/fab_menu_pop_up.dart';
 import 'package:dyvolt_employee/widgets/presensi_pop_up.dart';
 import 'package:flutter/material.dart';
@@ -70,7 +68,7 @@ class SakitDetailContent extends StatelessWidget {
                                                   'assets/icons/icon_detail_presensi.svg',
                                                   height: 22,
                                                   width: 22),
-                                              SizedBox(
+                                              const SizedBox(
                                                 width: 8,
                                               ),
                                               Text('Detail Sakit',
@@ -78,7 +76,7 @@ class SakitDetailContent extends StatelessWidget {
                                                       TextStyles.text16px700())
                                             ],
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 23,
                                           ),
                                           Row(
@@ -103,7 +101,7 @@ class SakitDetailContent extends StatelessWidget {
                                               ),
                                             ],
                                           ),
-                                          SizedBox(height: 18),
+                                          const SizedBox(height: 18),
                                           Row(
                                             children: [
                                               Expanded(
@@ -126,7 +124,7 @@ class SakitDetailContent extends StatelessWidget {
                                               ),
                                             ],
                                           ),
-                                          SizedBox(height: 18),
+                                          const SizedBox(height: 18),
                                           Row(
                                             children: [
                                               Expanded(
@@ -150,7 +148,7 @@ class SakitDetailContent extends StatelessWidget {
                                               ),
                                             ],
                                           ),
-                                          SizedBox(height: 18),
+                                          const SizedBox(height: 18),
                                           Row(
                                             children: [
                                               Expanded(
@@ -175,7 +173,7 @@ class SakitDetailContent extends StatelessWidget {
                                               ),
                                             ],
                                           ),
-                                          SizedBox(height: 18),
+                                          const SizedBox(height: 18),
                                           Row(
                                             children: [
                                               Expanded(

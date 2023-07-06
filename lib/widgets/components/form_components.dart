@@ -122,7 +122,7 @@ class _TextInputWhiteState extends State<TextInputWhite> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         widget.labelText == ''
-            ? SizedBox(
+            ? const SizedBox(
                 height: 0,
               )
             : GestureDetector(
@@ -663,7 +663,7 @@ class _DateInputWState extends State<DateInputW> {
                 style: TextStyle(color: Colors.grey[600], fontSize: 15),
               ),
             ),
-            Icon(
+            const Icon(
               Icons.calendar_today,
               size: 16,
               color: Colors.black87,
@@ -708,7 +708,7 @@ class ClockInputW extends StatefulWidget {
 }
 
 class _ClockInputWState extends State<ClockInputW> {
-  bool _isFocused = false;
+  final bool _isFocused = false;
   late TextEditingController _textEditingController;
   TimeOfDay? _selectedTime;
 
@@ -759,7 +759,7 @@ class _ClockInputWState extends State<ClockInputW> {
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
             hintText: '01:01',
-            hintStyle: TextStyle(
+            hintStyle: const TextStyle(
               color: Colors.grey,
               fontSize: 16,
             ),
@@ -779,7 +779,7 @@ class _ClockInputWState extends State<ClockInputW> {
               ),
             ),
           ),
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             color: AppColors.blackColor,
           ),

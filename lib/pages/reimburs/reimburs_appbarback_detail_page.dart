@@ -56,7 +56,7 @@ class ReimbursAppbarback extends StatelessWidget {
                               },
                             ),
                           ),
-                          SizedBox(width: 6),
+                          const SizedBox(width: 6),
                           Expanded(
                             child: DropdownW(
                               labelText: 'Status',

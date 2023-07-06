@@ -1,5 +1,4 @@
 import 'package:dyvolt_employee/main_page.dart';
-import 'package:dyvolt_employee/pages/home_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/utils/icons.dart';
@@ -57,9 +56,9 @@ class LoginPage extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Opacity(
+                              const Opacity(
                                 opacity:0,
-                                child: const CustomIcon(
+                                child: CustomIcon(
                                     iconName: 'icon_close',
                                     size: 24,
                                     color: AppColors.blackColor),
@@ -105,7 +104,7 @@ class LoginPage extends StatelessWidget {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => MainPage(),
+                                        builder: (context) => const MainPage(),
                                       ),
                                     );
                                   }),

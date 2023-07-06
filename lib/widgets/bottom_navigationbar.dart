@@ -1,8 +1,4 @@
 import 'package:dyvolt_employee/main_page.dart';
-import 'package:dyvolt_employee/pages/home_page.dart';
-import 'package:dyvolt_employee/pages/profile_page.dart';
-import 'package:dyvolt_employee/pages/reimburs_page.dart';
-import 'package:dyvolt_employee/pages/work_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/icons.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +37,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MainPage()),
+                MaterialPageRoute(builder: (context) => const MainPage()),
               );
               _onItemTapped(0); // Mengubah selectedIndex saat tombol diklik
             },
@@ -55,7 +51,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MainPage()),
+                MaterialPageRoute(builder: (context) => const MainPage()),
               );
               _onItemTapped(1); // Mengubah selectedIndex saat tombol diklik
             },
@@ -70,7 +66,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MainPage()),
+                MaterialPageRoute(builder: (context) => const MainPage()),
               );
               _onItemTapped(2); // Mengubah selectedIndex saat tombol diklik
             },
@@ -84,7 +80,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MainPage()),
+                MaterialPageRoute(builder: (context) => const MainPage()),
               );
               _onItemTapped(3); // Mengubah selectedIndex saat tombol diklik
             },

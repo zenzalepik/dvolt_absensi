@@ -4,7 +4,7 @@ import 'package:dyvolt_employee/widgets/appabr.dart';
 import 'package:flutter/material.dart';
 
 class WorkOrderDetail extends StatelessWidget {
-  WorkOrderDetail({super.key});
+  const WorkOrderDetail({super.key});
 
 
 

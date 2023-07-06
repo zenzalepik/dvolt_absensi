@@ -54,7 +54,7 @@ class IzinPengajuanContent extends StatelessWidget {
                                 style: TextStyles.text24px600())),
                       ],
                     ),
-                    SizedBox(height: 12),
+                    const SizedBox(height: 12),
                     Row(
                       children: [
                         Expanded(
@@ -80,7 +80,7 @@ class IzinPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        SizedBox(height: 4),
+                                        const SizedBox(height: 4),
                                         DropdownWhiteW(
                                           labelText: 'Pilih Tipe Izin',
                                           items: const [
@@ -91,7 +91,7 @@ class IzinPengajuanContent extends StatelessWidget {
                                             print('Selected option: $value');
                                           },
                                         ),
-                                        SizedBox(height: 12),
+                                        const SizedBox(height: 12),
                                         Row(
                                           children: [
                                             Expanded(
@@ -102,7 +102,7 @@ class IzinPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        SizedBox(height: 4),
+                                        const SizedBox(height: 4),
                                         DateInputW(
                                           labelText: '12 - August - 2022',
                                           onChanged: (String SelectedDate) {
@@ -110,7 +110,7 @@ class IzinPengajuanContent extends StatelessWidget {
                                                 'Selected Date: $SelectedDate');
                                           },
                                         ),
-                                        SizedBox(height: 12),
+                                        const SizedBox(height: 12),
                                         Row(
                                           children: [
                                             Expanded(
@@ -121,10 +121,10 @@ class IzinPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        TextInputWhite(
+                                        const TextInputWhite(
                                           hintText: 'Alasan pengajuan cuti...',
                                         ),
-                                        SizedBox(height: 12),
+                                        const SizedBox(height: 12),
                                         Row(
                                           children: [
                                             Expanded(
@@ -136,10 +136,10 @@ class IzinPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        TextInputWhite(
+                                        const TextInputWhite(
                                           hintText: '+628 172 312 3246',
                                         ),
-                                        SizedBox(height: 18),
+                                        const SizedBox(height: 18),
                                         Row(
                                           children: [
                                             Expanded(
@@ -150,14 +150,14 @@ class IzinPengajuanContent extends StatelessWidget {
                                                                 .blackColor))),
                                           ],
                                         ),
-                                        SizedBox(height: 4),
+                                        const SizedBox(height: 4),
                                         Row(
                                           children: [
                                             Expanded(
                                               child: GridView.builder(
                                                 shrinkWrap: true,
                                                 gridDelegate:
-                                                    SliverGridDelegateWithFixedCrossAxisCount(
+                                                    const SliverGridDelegateWithFixedCrossAxisCount(
                                                   crossAxisCount: 3,
                                                   mainAxisSpacing: 8,
                                                   crossAxisSpacing: 12,
@@ -180,11 +180,11 @@ class IzinPengajuanContent extends StatelessWidget {
                                                                   .grey2EColor, // color of dotted/dash line
                                                               strokeWidth:
                                                                   1, // thickness of dash/dots
-                                                              dashPattern: [
+                                                              dashPattern: const [
                                                                 8,
                                                                 4
                                                               ],
-                                                              radius: Radius
+                                                              radius: const Radius
                                                                   .circular(8),
                                                               child: Container(
                                                                 width: 100,
@@ -209,7 +209,7 @@ class IzinPengajuanContent extends StatelessWidget {
                                                                 height: 100,
                                                               ),
                                                             ),
-                                                            Container(
+                                                            const SizedBox(
                                                               height: 100,
                                                               width: 100,
                                                               child: Center(
@@ -246,11 +246,11 @@ class IzinPengajuanContent extends StatelessWidget {
                                                                   .grey2EColor, // color of dotted/dash line
                                                               strokeWidth:
                                                                   1, // thickness of dash/dots
-                                                              dashPattern: [
+                                                              dashPattern: const [
                                                                 8,
                                                                 4
                                                               ],
-                                                              radius: Radius
+                                                              radius: const Radius
                                                                   .circular(8),
                                                               child: Container(
                                                                 width: 100,
@@ -281,7 +281,7 @@ class IzinPengajuanContent extends StatelessWidget {
                                                                 height: 100,
                                                               ),
                                                             ),
-                                                            Container(
+                                                            const SizedBox(
                                                               height: 100,
                                                               width: 100,
                                                               child: Center(
@@ -308,7 +308,7 @@ class IzinPengajuanContent extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-                                        SizedBox(height: 12),
+                                        const SizedBox(height: 12),
                                         Row(
                                           children: [
                                             Expanded(
@@ -325,7 +325,7 @@ class IzinPengajuanContent extends StatelessWidget {
                                 ]))),
                       ],
                     ),
-                    SizedBox(height: 12),
+                    const SizedBox(height: 12),
                     Row(
                       children: [
                         Expanded(
