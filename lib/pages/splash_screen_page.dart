@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:dyvolt_employee/main_page.dart';
+import 'package:dyvolt_employee/pages/login_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:dyvolt_employee/utils/colors.dart';
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // Delay navigasi ke halaman beranda menggunakan Timer
     Timer(const Duration(milliseconds: 3500), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => const MainPage()),
+        MaterialPageRoute(builder: (_) => const LoginPage()),
       );
     });
   }

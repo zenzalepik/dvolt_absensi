@@ -6,7 +6,7 @@ import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:flutter/material.dart';
 
 class WorkPage extends StatelessWidget {
-  const WorkPage({super.key});
+  WorkPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -79,41 +79,76 @@ class WorkPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {},
+                        onTap: () {                          Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                  builder: (BuildContext context) =>
+                                      const WorkOrderDetailPage()));
+   },
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.primaryColor,
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {},
+                        onTap: () {                          Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                  builder: (BuildContext context) =>
+                                      const WorkOrderDetailPage()));
+   },
                         bgColor: AppColors.bgGreen,
                         labelColor: AppColors.labelSuccessColor,
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {},
+                        onTap: () {                          Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                  builder: (BuildContext context) =>
+                                      const WorkOrderDetailPage()));
+   },
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.labelInfoColor,
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {},
+                        onTap: () {                          Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                  builder: (BuildContext context) =>
+                                      const WorkOrderDetailPage()));
+   },
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.labelInfoColor,
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {},
+                        onTap: () {                          Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                  builder: (BuildContext context) =>
+                                      const WorkOrderDetailPage()));
+   },
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {},
+                        onTap: () {                          Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                  builder: (BuildContext context) =>
+                                      const WorkOrderDetailPage()));
+   },
                         bgColor: AppColors.bgGreen,
                         labelColor: AppColors.labelSuccessColor,
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {},
+                        onTap: () {                          Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                  builder: (BuildContext context) =>
+                                      const WorkOrderDetailPage()));
+   },
                       ),
                     ],
                   ),

@@ -405,11 +405,15 @@ class ButtonCustom extends StatelessWidget {
 class TextButtonCustom extends StatefulWidget {
   final String labelText;
   final VoidCallback onPressed;
+  final bool tabActive;
+  final bool tabDisable;
 
   const TextButtonCustom({
     Key? key,
     required this.labelText,
     required this.onPressed,
+    this.tabActive = false,
+    this.tabDisable = false,
   }) : super(key: key);
 
   @override
@@ -443,8 +447,13 @@ class _TextButtonCustomState extends State<TextButtonCustom> {
         child: Text(widget.labelText,
             textAlign: TextAlign.center,
             style: TextStyles.text20px600(
-              color:
-                  isPressed ? AppColors.primaryColor : AppColors.greyBlackColor,
+              color: widget.tabActive == true
+                  ? AppColors.primaryColor
+                  : widget.tabDisable == true && widget.tabActive == false
+                      ? AppColors.grey63Color
+                      : isPressed
+                          ? AppColors.primaryColor
+                          : AppColors.greyBlackColor,
             )),
       ),
     );

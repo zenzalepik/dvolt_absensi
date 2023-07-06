@@ -1,3 +1,4 @@
+import 'package:dyvolt_employee/main_page.dart';
 import 'package:dyvolt_employee/pages/home_page.dart';
 import 'package:dyvolt_employee/pages/profile_page.dart';
 import 'package:dyvolt_employee/pages/reimburs_page.dart';
@@ -6,8 +7,21 @@ import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/icons.dart';
 import 'package:flutter/material.dart';
 
-class BottomNavigationWidget extends StatelessWidget {
-  const BottomNavigationWidget({super.key});
+class BottomNavigationWidget extends StatefulWidget {
+  const BottomNavigationWidget({Key? key}) : super(key: key);
+
+  @override
+  _BottomNavigationWidgetState createState() => _BottomNavigationWidgetState();
+}
+
+class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +41,9 @@ class BottomNavigationWidget extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const HomePage()),
+                MaterialPageRoute(builder: (context) => MainPage()),
               );
+              _onItemTapped(0); // Mengubah selectedIndex saat tombol diklik
             },
           ),
           IconButton(
@@ -40,8 +55,9 @@ class BottomNavigationWidget extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const WorkPage()),
+                MaterialPageRoute(builder: (context) => MainPage()),
               );
+              _onItemTapped(1); // Mengubah selectedIndex saat tombol diklik
             },
           ),
           const SizedBox(width: 48), // Mengisi ruang untuk notch
@@ -54,8 +70,9 @@ class BottomNavigationWidget extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const ReimbursPage()),
+                MaterialPageRoute(builder: (context) => MainPage()),
               );
+              _onItemTapped(2); // Mengubah selectedIndex saat tombol diklik
             },
           ),
           IconButton(
@@ -67,8 +84,9 @@ class BottomNavigationWidget extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const ProfilePage()),
+                MaterialPageRoute(builder: (context) => MainPage()),
               );
+              _onItemTapped(3); // Mengubah selectedIndex saat tombol diklik
             },
           ),
         ],

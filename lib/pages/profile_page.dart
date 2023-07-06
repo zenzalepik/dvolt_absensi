@@ -1,4 +1,10 @@
+import 'package:dyvolt_employee/pages/izin/izin_page.dart';
 import 'package:dyvolt_employee/pages/lembur/lembur_page.dart';
+import 'package:dyvolt_employee/pages/login_page.dart';
+import 'package:dyvolt_employee/pages/performa/performa_mekanik_page.dart';
+import 'package:dyvolt_employee/pages/presensi/presensi_page.dart';
+import 'package:dyvolt_employee/pages/reimburs/reimburs_appbarback_page.dart';
+import 'package:dyvolt_employee/pages/reimburs/reimburs_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/widgets/arrow_menu.dart';
@@ -85,7 +91,12 @@ class ProfilePage extends StatelessWidget {
                               Expanded(
                                 child: ArrowMenuW(
                                   labelText: 'Presensi Kehadiran',
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => PresensiPage(),
+                                        ));},
                                 ),
                               )
                             ],
@@ -98,7 +109,12 @@ class ProfilePage extends StatelessWidget {
                               Expanded(
                                 child: ArrowMenuW(
                                   labelText: 'Performa Mekanik',
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => PerformaMekanikPage(),
+                                        ));},
                                 ),
                               )
                             ],
@@ -111,7 +127,12 @@ class ProfilePage extends StatelessWidget {
                               Expanded(
                                 child: ArrowMenuW(
                                   labelText: 'Perizinan Kerja',
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => IzinPage(),
+                                        ));},
                                 ),
                               )
                             ],
@@ -124,7 +145,12 @@ class ProfilePage extends StatelessWidget {
                               Expanded(
                                 child: ArrowMenuW(
                                   labelText: 'Reimburs',
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => ReimbursAppbarbackPage(),
+                                        ));},
                                 ),
                               )
                             ],
@@ -156,7 +182,11 @@ class ProfilePage extends StatelessWidget {
                               Expanded(
                                 child: ArrowMenuW(
                                   labelText: 'Logout',
-                                  onTap: () {},
+                                  onTap: () {Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => LoginPage()),
+        (Route<dynamic> route) => false,
+      );},
                                 ),
                               )
                             ],

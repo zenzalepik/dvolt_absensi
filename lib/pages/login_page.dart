@@ -1,3 +1,4 @@
+import 'package:dyvolt_employee/main_page.dart';
 import 'package:dyvolt_employee/pages/home_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
@@ -56,10 +57,13 @@ class LoginPage extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const CustomIcon(
-                                  iconName: 'icon_close',
-                                  size: 24,
-                                  color: AppColors.blackColor),
+                              Opacity(
+                                opacity:0,
+                                child: const CustomIcon(
+                                    iconName: 'icon_close',
+                                    size: 24,
+                                    color: AppColors.blackColor),
+                              ),
                               const SizedBox(
                                 height: 28,
                               ),
@@ -95,12 +99,16 @@ class LoginPage extends StatelessWidget {
                               const SizedBox(
                                 height: 56,
                               ),
-                              Button(labelText: 'Sign In', onPressed: () {Navigator.push(
-  context,
-  MaterialPageRoute(
-    builder: (context) => const HomePage(),
-  ),
-);}),
+                              Button(
+                                  labelText: 'Sign In',
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => MainPage(),
+                                      ),
+                                    );
+                                  }),
                             ],
                           ),
                         ),

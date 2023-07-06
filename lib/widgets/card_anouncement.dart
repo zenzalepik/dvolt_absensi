@@ -32,7 +32,7 @@ class CardAnaouncementWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
-                  child: Text('Mengganti suku Cadang EV6 Light (RWD)',
+                  child: Text('Libur Kerja selama 3 hari selama idul Adha',
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyles.text16px700()),

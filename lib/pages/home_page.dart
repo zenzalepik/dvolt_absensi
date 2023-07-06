@@ -1,7 +1,8 @@
 import 'package:dyvolt_employee/pages/izin/izin_page.dart';
 import 'package:dyvolt_employee/pages/performa/performa_mekanik_page.dart';
 import 'package:dyvolt_employee/pages/presensi/presensi_page.dart';
-import 'package:dyvolt_employee/pages/sakit/_sakit_page.dart_';
+import 'package:dyvolt_employee/pages/sakit/sakit_page.dart';
+import 'package:dyvolt_employee/pages/work/work_order_detail_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/widgets/appabr.dart';
@@ -51,11 +52,21 @@ class HomePage extends StatelessWidget {
                       Text('Work Order', style: TextStyles.textTitleSection()),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {},
+                        onTap: () {                          Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                  builder: (BuildContext context) =>
+                                      const WorkOrderDetailPage()));
+   },
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {},
+                        onTap: () {                          Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                  builder: (BuildContext context) =>
+                                      const WorkOrderDetailPage()));
+   },
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.primaryColor,
                       ),
