@@ -17,7 +17,7 @@ class Reimburs extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 104 + 36 + 9 - 104 + 32,
+                height: 104 + 36 + 9 - 104 + 32 - 24,
               ),
               const SizedBox(
                 height: 32,

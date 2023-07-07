@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 class WorkOrderDetail extends StatelessWidget {
   const WorkOrderDetail({super.key});
 
-
-
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -18,7 +16,7 @@ class WorkOrderDetail extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 104 + 36 + 9 - 104 + 32,
+                height: 104 + 36 + 9 - 104 + 32 - 9,
               ),
               const SizedBox(
                 height: 32,
@@ -94,7 +92,8 @@ class WorkOrderDetail extends StatelessWidget {
                                     ),
                                     const SizedBox(width: 12),
                                     Expanded(
-                                      child: Text('July 23, 2022',textAlign:TextAlign.right,
+                                      child: Text('July 23, 2022',
+                                          textAlign: TextAlign.right,
                                           style: TextStyles.text18px600()),
                                     ),
                                   ],
@@ -120,7 +119,8 @@ class WorkOrderDetail extends StatelessWidget {
                                     ),
                                     const SizedBox(width: 12),
                                     Expanded(
-                                      child: Text('July 27, 2022',textAlign:TextAlign.right,
+                                      child: Text('July 27, 2022',
+                                          textAlign: TextAlign.right,
                                           style: TextStyles.text18px600()),
                                     ),
                                   ],
@@ -146,7 +146,8 @@ class WorkOrderDetail extends StatelessWidget {
                                     ),
                                     const SizedBox(width: 12),
                                     Expanded(
-                                      child: Text('Completed',textAlign:TextAlign.right,
+                                      child: Text('Completed',
+                                          textAlign: TextAlign.right,
                                           style: TextStyles.text18px600()),
                                     ),
                                   ],
@@ -172,7 +173,8 @@ class WorkOrderDetail extends StatelessWidget {
                                     ),
                                     const SizedBox(width: 12),
                                     Expanded(
-                                      child: Text('Bearing',textAlign:TextAlign.right,
+                                      child: Text('Bearing',
+                                          textAlign: TextAlign.right,
                                           style: TextStyles.text18px600()),
                                     ),
                                   ],
@@ -198,7 +200,8 @@ class WorkOrderDetail extends StatelessWidget {
                                     ),
                                     const SizedBox(width: 12),
                                     Expanded(
-                                      child: Text('Filter',textAlign:TextAlign.right,
+                                      child: Text('Filter',
+                                          textAlign: TextAlign.right,
                                           style: TextStyles.text18px600()),
                                     ),
                                   ],
@@ -224,7 +227,8 @@ class WorkOrderDetail extends StatelessWidget {
                                     ),
                                     const SizedBox(width: 12),
                                     Expanded(
-                                      child: Text('CrankShaft',textAlign:TextAlign.right,
+                                      child: Text('CrankShaft',
+                                          textAlign: TextAlign.right,
                                           style: TextStyles.text18px600()),
                                     ),
                                   ],

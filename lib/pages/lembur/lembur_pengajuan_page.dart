@@ -2,6 +2,7 @@ import 'package:blur/blur.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/widgets/appabr.dart';
+import 'package:dyvolt_employee/widgets/appbar_empty.dart';
 import 'package:dyvolt_employee/widgets/bottom_navigationbar.dart';
 import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:dyvolt_employee/widgets/fab_menu_pop_up.dart';
@@ -22,7 +23,7 @@ class LemburPengajuanContent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 104 + 36 + 9 - 104 + 32,
+                height: 104 + 36 + 9 - 104 + 32 - 24,
               ),
               const SizedBox(
                 height: 32,
@@ -287,6 +288,10 @@ class _LemburPengajuanState extends State<LemburPengajuan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // Mengatur tinggi AppBar menjadi 0
+        child: AppBarEmptyW(),
+      ),
       // appBar: AppBar(title: Text('Bottom Navigation Bar')),
       body: Stack(
         children: [
@@ -306,31 +311,30 @@ class _LemburPengajuanState extends State<LemburPengajuan> {
                         ),
                       )
                     : _widgetOptions.elementAt(_selectedIndex),
-        AnimatedOpacity(
-                    // If the widget is visible, animate to 0.0 (invisible).
-                    // If the widget is hidden, animate to 1.0 (fully visible).
-                    opacity: animateOpacity ? 1.0 : 0.0,
-                    duration: const Duration(milliseconds: 500),
-                    child: Visibility(
-                        visible: fabMenuOpacity,
-                        child: FABMenuPopUp(
-                          fabMenuPresensi: _fabMenuPresensi,
-                          showFAB: _showFAB,
-                        )),
-                  ),
-                  AnimatedOpacity(
-                    // If the widget is visible, animate to 0.0 (invisible).
-                    // If the widget is hidden, animate to 1.0 (fully visible).
-                    opacity: animateOpacity ? 1.0 : 0.0,
-                    duration: const Duration(milliseconds: 500),
-                    child: Visibility(
-                        visible:
-                            fabMenuPresensiOpacity, //fabMenuPresensiOpacity
-                        child: PresensiPopUp(
-                          onPressed: _showFAB,
-                        )),
-                  ),
-                ],
+                AnimatedOpacity(
+                  // If the widget is visible, animate to 0.0 (invisible).
+                  // If the widget is hidden, animate to 1.0 (fully visible).
+                  opacity: animateOpacity ? 1.0 : 0.0,
+                  duration: const Duration(milliseconds: 500),
+                  child: Visibility(
+                      visible: fabMenuOpacity,
+                      child: FABMenuPopUp(
+                        fabMenuPresensi: _fabMenuPresensi,
+                        showFAB: _showFAB,
+                      )),
+                ),
+                AnimatedOpacity(
+                  // If the widget is visible, animate to 0.0 (invisible).
+                  // If the widget is hidden, animate to 1.0 (fully visible).
+                  opacity: animateOpacity ? 1.0 : 0.0,
+                  duration: const Duration(milliseconds: 500),
+                  child: Visibility(
+                      visible: fabMenuPresensiOpacity, //fabMenuPresensiOpacity
+                      child: PresensiPopUp(
+                        onPressed: _showFAB,
+                      )),
+                ),
+              ],
             ),
           ),
           // Container(

@@ -6,6 +6,7 @@ import 'package:dyvolt_employee/pages/work/work_order_detail_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/widgets/appabr.dart';
+import 'package:dyvolt_employee/widgets/appbar_empty.dart';
 import 'package:dyvolt_employee/widgets/card_activities.dart';
 import 'package:dyvolt_employee/widgets/card_anouncement.dart';
 import 'package:dyvolt_employee/widgets/card_order.dart';
@@ -17,6 +18,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // Mengatur tinggi AppBar menjadi 0
+        child: AppBarEmptyW(),
+      ),
       backgroundColor: AppColors.whiteColor,
       body: Stack(
         children: [
@@ -26,7 +31,7 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
-                  height: 104,
+                  height: 104 - 24,
                 ),
                 const SizedBox(
                   height: 32,
@@ -52,21 +57,23 @@ class HomePage extends StatelessWidget {
                       Text('Work Order', style: TextStyles.textTitleSection()),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {                          Navigator.push(
+                        onTap: () {
+                          Navigator.push(
                               context,
                               MaterialPageRoute<void>(
                                   builder: (BuildContext context) =>
                                       const WorkOrderDetailPage()));
-   },
+                        },
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {                          Navigator.push(
+                        onTap: () {
+                          Navigator.push(
                               context,
                               MaterialPageRoute<void>(
                                   builder: (BuildContext context) =>
                                       const WorkOrderDetailPage()));
-   },
+                        },
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.primaryColor,
                       ),

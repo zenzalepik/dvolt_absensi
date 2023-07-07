@@ -1,6 +1,7 @@
 import 'package:blur/blur.dart';
 import 'package:dyvolt_employee/pages/izin/izin_content_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
+import 'package:dyvolt_employee/widgets/appbar_empty.dart';
 import 'package:dyvolt_employee/widgets/bottom_navigationbar.dart';
 import 'package:dyvolt_employee/widgets/fab_menu_pop_up.dart';
 import 'package:dyvolt_employee/widgets/presensi_pop_up.dart';
@@ -61,6 +62,10 @@ class _IzinPageState extends State<IzinPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // Mengatur tinggi AppBar menjadi 0
+        child: AppBarEmptyW(),
+      ),
       // appBar: AppBar(title: Text('Bottom Navigation Bar')),
       body: Stack(
         children: [

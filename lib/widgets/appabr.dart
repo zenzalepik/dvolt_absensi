@@ -15,7 +15,7 @@ class AppBarHello extends StatelessWidget {
         bottomRight: Radius.circular(20),
       ),
       child: Container(
-        height: 104,
+        height: 88,
         width: double.infinity,
         color: AppColors.primaryColor,
         child: ClipRect(
@@ -62,7 +62,7 @@ class AppBarBack extends StatelessWidget {
         bottomRight: Radius.circular(20),
       ),
       child: Container(
-        height: 104 - 36 + 9,
+        height: 104 - 36 + 4,
         width: double.infinity,
         color: AppColors.primaryColor,
         child: ClipRect(
@@ -83,7 +83,7 @@ class AppBarBack extends StatelessWidget {
                   Row(
                     children: [
                       GestureDetector(
-                        onTap:onBack,
+                        onTap: onBack,
                         child: const CustomIcon(
                           iconName: 'icon_back',
                           size: 24,

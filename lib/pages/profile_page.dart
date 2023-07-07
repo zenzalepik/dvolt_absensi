@@ -6,6 +6,7 @@ import 'package:dyvolt_employee/pages/presensi/presensi_page.dart';
 import 'package:dyvolt_employee/pages/reimburs/reimburs_appbarback_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
+import 'package:dyvolt_employee/widgets/appbar_empty.dart';
 import 'package:dyvolt_employee/widgets/arrow_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -16,6 +17,10 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // Mengatur tinggi AppBar menjadi 0
+        child: AppBarEmptyW(),
+      ),
       backgroundColor: AppColors.primaryColor,
       body: Stack(
         children: [

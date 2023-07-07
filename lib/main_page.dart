@@ -5,12 +5,14 @@ import 'package:dyvolt_employee/pages/reimburs/reimburs_page.dart';
 import 'package:dyvolt_employee/pages/work/work_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/icons.dart';
+import 'package:dyvolt_employee/widgets/appbar_empty.dart';
 import 'package:dyvolt_employee/widgets/fab_menu_pop_up.dart';
 import 'package:dyvolt_employee/widgets/presensi_pop_up.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  final int selectedIndex;
+  const MainPage({required this.selectedIndex});
 
   @override
   _MainPageState createState() => _MainPageState();
@@ -56,6 +58,12 @@ class _MainPageState extends State<MainPage> {
     });
   }
 
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = widget.selectedIndex;
+  }
+
   final List<Widget> _widgetOptions = [
     const HomePage(),
     const WorkPage(),
@@ -66,6 +74,10 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // Mengatur tinggi AppBar menjadi 0
+        child: AppBarEmptyW(),
+      ),
       // appBar: AppBar(title: Text('Bottom Navigation Bar')),
       body: Center(
         child: Stack(
@@ -116,90 +128,113 @@ class _MainPageState extends State<MainPage> {
               bottom: 0,
               right: 0,
               left: 0,
-              child: BottomAppBar(
-                height: 56,
-                shape: const CircularNotchedRectangle(),
-                notchMargin: 8,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    IconButton(
-                      icon: _selectedIndex == 0
-                          ? const CustomIcon(
-                              iconName: 'icon_home_filled',
-                              color: AppColors.primaryColor,
-                              size: 24,
-                            )
-                          : const CustomIcon(
-                              iconName: 'icon_home',
-                              color: AppColors.blackColor,
-                              size: 24,
-                            ),
-                      onPressed: () {
-                        _onItemTapped(0);
-                        _showFAB();
-                      },
+              child: Stack(
+                children: [
+                  SizedBox(
+                    child: BottomAppBar(
+                        padding: EdgeInsets.fromLTRB(0, 0, 0, 12),
+                        clipBehavior: Clip.antiAlias,
+                        height: 48,
+                        shape: const CircularNotchedRectangle(),
+                        notchMargin: 8,
+                        child: Container()),
+                  ),
+                  Positioned(
+                    right: 0,
+                    left: 0,
+                    bottom: 8,
+                    child: SizedBox(
+                      width: double.infinity,
+                      height: 32,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          IconButton(
+                            padding: EdgeInsets.all(0),
+                            icon: _selectedIndex == 0
+                                ? const CustomIcon(
+                                    iconName: 'icon_home_filled',
+                                    color: AppColors.primaryColor,
+                                    size: 24,
+                                  )
+                                : const CustomIcon(
+                                    iconName: 'icon_home',
+                                    color: AppColors.blackColor,
+                                    size: 24,
+                                  ),
+                            onPressed: () {
+                              _onItemTapped(0);
+                              _showFAB();
+                            },
+                          ),
+                          IconButton(
+                            padding: EdgeInsets.all(0),
+                            icon: _selectedIndex == 1
+                                ? const CustomIcon(
+                                    iconName: 'icon_work_filled',
+                                    color: AppColors.primaryColor,
+                                    size: 24,
+                                  )
+                                : const CustomIcon(
+                                    iconName: 'icon_work',
+                                    color: AppColors.blackColor,
+                                    size: 24,
+                                  ),
+                            onPressed: () {
+                              _onItemTapped(1);
+                              _showFAB();
+                            },
+                          ),
+                          const SizedBox(
+                              width: 48), // Mengisi ruang untuk notch
+                          IconButton(
+                            padding: EdgeInsets.all(0),
+                            icon: _selectedIndex == 2
+                                ? const CustomIcon(
+                                    iconName: 'icon_wallet_filled',
+                                    color: AppColors.primaryColor,
+                                    size: 24,
+                                  )
+                                : const CustomIcon(
+                                    iconName: 'icon_wallet',
+                                    color: AppColors.blackColor,
+                                    size: 24,
+                                  ),
+                            onPressed: () {
+                              _onItemTapped(2);
+                              _showFAB();
+                            },
+                          ),
+                          IconButton(
+                            padding: EdgeInsets.all(0),
+                            icon: _selectedIndex == 3
+                                ? const CustomIcon(
+                                    iconName: 'icon_profile_filled',
+                                    color: AppColors.primaryColor,
+                                    size: 24,
+                                  )
+                                : const CustomIcon(
+                                    iconName: 'icon_profile',
+                                    color: AppColors.blackColor,
+                                    size: 24,
+                                  ),
+                            onPressed: () {
+                              _onItemTapped(3);
+                              _showFAB();
+                            },
+                          ),
+                        ],
+                      ),
                     ),
-                    IconButton(
-                      icon: _selectedIndex == 1
-                          ? const CustomIcon(
-                              iconName: 'icon_work_filled',
-                              color: AppColors.primaryColor,
-                              size: 24,
-                            )
-                          : const CustomIcon(
-                              iconName: 'icon_work',
-                              color: AppColors.blackColor,
-                              size: 24,
-                            ),
-                      onPressed: () {
-                        _onItemTapped(1);
-                        _showFAB();
-                      },
-                    ),
-                    const SizedBox(width: 48), // Mengisi ruang untuk notch
-                    IconButton(
-                      icon: _selectedIndex == 2
-                          ? const CustomIcon(
-                              iconName: 'icon_wallet_filled',
-                              color: AppColors.primaryColor,
-                              size: 24,
-                            )
-                          : const CustomIcon(
-                              iconName: 'icon_wallet',
-                              color: AppColors.blackColor,
-                              size: 24,
-                            ),
-                      onPressed: () {
-                        _onItemTapped(2);
-                        _showFAB();
-                      },
-                    ),
-                    IconButton(
-                      icon: _selectedIndex == 3
-                          ? const CustomIcon(
-                              iconName: 'icon_profile_filled',
-                              color: AppColors.primaryColor,
-                              size: 24,
-                            )
-                          : const CustomIcon(
-                              iconName: 'icon_profile',
-                              color: AppColors.blackColor,
-                              size: 24,
-                            ),
-                      onPressed: () {
-                        _onItemTapped(3);
-                        _showFAB();
-                      },
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ],
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniCenterFloat,
       floatingActionButton: Opacity(
         opacity: fabOpacity.toDouble(),
         child: Container(

@@ -1,6 +1,7 @@
 import 'package:dyvolt_employee/pages/work/work_order_detail_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/widgets/appabr.dart';
+import 'package:dyvolt_employee/widgets/appbar_empty.dart';
 import 'package:dyvolt_employee/widgets/card_order.dart';
 import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,10 @@ class WorkPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // Mengatur tinggi AppBar menjadi 0
+        child: AppBarEmptyW(),
+      ),
       backgroundColor: AppColors.whiteColor,
       body: Stack(
         children: [
@@ -20,7 +25,7 @@ class WorkPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
-                  height: 104,
+                  height: 104 - 24,
                 ),
                 const SizedBox(
                   height: 32,
@@ -79,76 +84,83 @@ class WorkPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {                          Navigator.push(
+                        onTap: () {
+                          Navigator.push(
                               context,
                               MaterialPageRoute<void>(
                                   builder: (BuildContext context) =>
                                       const WorkOrderDetailPage()));
-   },
+                        },
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.primaryColor,
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {                          Navigator.push(
+                        onTap: () {
+                          Navigator.push(
                               context,
                               MaterialPageRoute<void>(
                                   builder: (BuildContext context) =>
                                       const WorkOrderDetailPage()));
-   },
+                        },
                         bgColor: AppColors.bgGreen,
                         labelColor: AppColors.labelSuccessColor,
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {                          Navigator.push(
+                        onTap: () {
+                          Navigator.push(
                               context,
                               MaterialPageRoute<void>(
                                   builder: (BuildContext context) =>
                                       const WorkOrderDetailPage()));
-   },
+                        },
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.labelInfoColor,
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {                          Navigator.push(
+                        onTap: () {
+                          Navigator.push(
                               context,
                               MaterialPageRoute<void>(
                                   builder: (BuildContext context) =>
                                       const WorkOrderDetailPage()));
-   },
+                        },
                         bgColor: AppColors.bgGrey,
                         labelColor: AppColors.labelInfoColor,
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {                          Navigator.push(
+                        onTap: () {
+                          Navigator.push(
                               context,
                               MaterialPageRoute<void>(
                                   builder: (BuildContext context) =>
                                       const WorkOrderDetailPage()));
-   },
+                        },
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {                          Navigator.push(
+                        onTap: () {
+                          Navigator.push(
                               context,
                               MaterialPageRoute<void>(
                                   builder: (BuildContext context) =>
                                       const WorkOrderDetailPage()));
-   },
+                        },
                         bgColor: AppColors.bgGreen,
                         labelColor: AppColors.labelSuccessColor,
                       ),
                       const SizedBox(height: 12),
                       CardOrderWidget(
-                        onTap: () {                          Navigator.push(
+                        onTap: () {
+                          Navigator.push(
                               context,
                               MaterialPageRoute<void>(
                                   builder: (BuildContext context) =>
                                       const WorkOrderDetailPage()));
-   },
+                        },
                       ),
                     ],
                   ),

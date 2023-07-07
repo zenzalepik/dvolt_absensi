@@ -2,6 +2,7 @@ import 'package:dyvolt_employee/main_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/utils/fonts.dart';
 import 'package:dyvolt_employee/utils/icons.dart';
+import 'package:dyvolt_employee/widgets/appbar_empty.dart';
 import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,6 +13,10 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // Mengatur tinggi AppBar menjadi 0
+        child: AppBarEmptyW(),
+      ),
         backgroundColor: AppColors.whiteColor,
         body: Builder(builder: (BuildContext context) {
           return Stack(
@@ -57,7 +62,7 @@ class LoginPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Opacity(
-                                opacity:0,
+                                opacity: 0,
                                 child: CustomIcon(
                                     iconName: 'icon_close',
                                     size: 24,
@@ -104,7 +109,9 @@ class LoginPage extends StatelessWidget {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => const MainPage(),
+                                        builder: (context) => MainPage(
+                                          selectedIndex: 0,
+                                        ),
                                       ),
                                     );
                                   }),

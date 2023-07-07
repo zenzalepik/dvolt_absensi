@@ -1,6 +1,7 @@
 import 'package:dyvolt_employee/pages/work/work_order_detail_page.dart';
 import 'package:dyvolt_employee/utils/colors.dart';
 import 'package:dyvolt_employee/widgets/appabr.dart';
+import 'package:dyvolt_employee/widgets/appbar_empty.dart';
 import 'package:dyvolt_employee/widgets/card_order.dart';
 import 'package:dyvolt_employee/widgets/components/form_components.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,10 @@ class WorkPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(0), // Mengatur tinggi AppBar menjadi 0
+        child: AppBarEmptyW(),
+      ),
       backgroundColor: AppColors.whiteColor,
       body: Stack(
         children: [
